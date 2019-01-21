@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
-<title id="title">OVC Survey</title>
+<title>OVC Survey</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=667, initial-scale=1">
 <meta name="viewport1" content="width=1024, initial-scale=1">       
@@ -23,58 +23,51 @@
             </ul>
         </nav> 
 </header> 
-<h1><br> OVC Squared INC. Beneficiary Screening Baseline Survey. <br></h1>
+<h1 id="title"><br> OVC Squared INC. Beneficiary Screening Baseline Survey. <br></h1>
 <p id="description">OVC Squared Inc. is a non profit organization dealing with orphans and vulnerable children in the horn of Africa. <strong><u>Instructions:</u></strong> Kindly fill in all the information required on the form </p>
 <form id="survey-form">
 <fieldset id="biodata" class="biodata">
     <legend id="legend1"> Key in Your Bio Data</legend>
-<label for="Name" id="Name-label">First Name:*</label>
-<input type="text" id="Name-label" name="Name" required placeholder="Enter your First Name"> 
-<label for="MName" id="MName-label">Maiden Name:</label>
-<input type="text" id="MName-label" name="MName" placeholder="Maiden/Middle Name">
-<label for="LName" id="LName-label">Last Name:*</label>
-<input type="text" id="LName" name="LName" required placeholder="Last/Surname">
+<label for="Name" id="name-label">Full Name:*</label>
+<input type="text" id="name" name="name-label" placeholder="Enter your Full Name" required> 
+<label for="email" id="email-label">Email:</label>
+<input id="email" type="email" placeholder="Enter your Email Address" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  size="30" required> 
+
+<label for="number" id="number-label">Age:</label>
+<input id="number" class="number" type="number" name="age" value="5" required min="5" max="100" size="5" placeholder="Select your age" onkeyup="imposeminmax(this)"> 
+    <span class="validity"></span>
                 <br><br>
 
 <label for="gender" style="align-content: center" id="gender">Gender:</label>
-<input id="male" type="radio" name="gender" value="1" required placeholder="Gender as male" checked>
 <label for="male">Male</label>
-<input id="fmale" type="radio" name="gender" value="2">
-<label for="fmale">Female</label> 
-<input id="ogender" type="radio" name="gender" value="3">
-<label for="ogender">N/A</label>
-<br><br>
+<input id="male" type="radio" name="gender" value="1" required placeholder="Select gender if male" checked>
+ <label for="fmale">Female</label>   
+<input id="fmale" type="radio" name="gender" value="2" placeholder="select radio if Female">
+ <label for="ogender">N/A</label>
+<input id="ogender" type="radio" name="gender" value="3" placeholder="select radio if gender is unknown">
 
-    
-<label for="yob">Year of Birth:</label> <input id="yob" class="yob" type="date" name="yob" required> 
-    
-<label for="age" id="number">Age:</label>
-<input id="number" class="number" type="number" name="age" value="5" required min="5" max="100" size="5" placeholder="5" onkeyup="imposeminmax(this)"> 
-    
-    
-   <br><br>
-<label for="email">Email:</label>
-<input id="email" type="email" placeholder="Enter your Email Address" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  size="30" required>  
+<br><br>
+<label for="yob">Year of Birth:</label> <input id="yob" class="yob" type="date" name="yob" required placeholder="Select yor year of birth"> 
     </fieldset> 
 
 <fieldset id="hhcapacity" class="hhcapacity">
 <legend>Enter your HouseHold Details</legend>              
 <label for="hh">Are you the Head of your household?</label> 
     <label id="hhyes">Yes</label>
-    <input id="hhyes" type="radio" name="hh" value="hhyes">
+    <input id="hhyes" type="radio" name="hh" value="hhyes" placeholder="select agree if in consent">
     <label id="hhno">No</label>
-    <input id="hhno" type="radio" name="hh" value="hhno"> 
+    <input id="hhno" type="radio" name="hh" value="hhno" placeholder="select this option if you do not agree to the terms and conditions"> 
     <br>
     
     
 <label for="nchildren">How many children under 5?</label> <br>
           <label id="umale">Male</label>
-          <input id="umale" type="number" name="umale" value="1" min="1" max="5" size="5" placeholder="1" onkeyup="imposeminmax(this)">
+          <input id="umale" type="number" name="umale" value="1" min="1" max="5" size="5" placeholder="under age male children" onkeyup="imposeminmax(this)">
     
           <label id="ufemale">Female</label>
-          <input id="ufemale" type="number" name="ufemale" value="1" min="1" max="5" size="5" placeholder="1" onkeyup="imposeminmax(this)"> 
+          <input id="ufemale" type="number" name="ufemale" value="1" min="1" max="5" size="5" placeholder="under age female children" onkeyup="imposeminmax(this)"> 
   <br> <br>
-<label for="teens">How many children Over 5?</label> <br>
+<label for="teens">How many children are Over 5years?</label> <br>
     <label id="tmale">Male</label>
     <input id="tmale" type="number" name="tmale" value="6" min="6" max="18" size="5" placeholder="1" onkeyup="imposeminmax(this)">
     <label id="tfemale">Female</label>
@@ -103,7 +96,6 @@
 <input name="collection" type="radio" id="ramba" value="ramba"/><label for="ramba">Ramba</label><br/>
                 </fieldset> 
     
-    
     <fieldset id="addinfor" class="addinfor">
     <legend id="legend4">Additional Information</legend>
         <label id="inter">Intervention Required:</label>
@@ -121,19 +113,13 @@
     <input id="disagree" type="radio" name="agree" value="2" required>
     </p> 
     
-<input id="submit" class="submit" type="submit" value="Submit">
+<input id="submit" class="submit" type="submit" value="Submit"> 
     
-    
-    </form>
-
-        
-   
+    </form>  
 <footer id="footer">&copy; 2019. All CopyRights Reserved. Agnes Mbuya. <a href="mailto:aggymbuya@gmail.com">Email:</a>
    <br> OVC Square Inc. A registered CBO
 </footer>        
-</main>    
-    
-
+</main>     
 
 </body>
 </html>
