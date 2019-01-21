@@ -30,13 +30,14 @@ li {
 }
 
 
-h1 {
+h1, title {
     text-align: center;
     font-type: monospace bold;
     color: #676767;
     background-color: #73c2fb;
     width: 90%;
     height: 30%;
+    font-size: 24px;
 }
 
 #description {
@@ -127,15 +128,21 @@ textarea {
     margin-top: 30px;
 }
 
+input:invalid+span:after {
+  content: '✖';
+  padding-left: 5px;
+}
 
+input:valid+span:after {
+  content: '✓';
+  padding-left: 5px;
+}
 
 input[type=text],
 input[type=email],
 input[type=number],
 textarea,
 fieldset {
-/* required to properly style form 
-   elements on WebKit based browsers */
   -webkit-appearance: none;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
