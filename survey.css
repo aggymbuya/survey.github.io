@@ -1,0 +1,150 @@
+body {
+    
+    background-color: white;
+    color: #000000;
+    position:relative;
+    object-position: top;
+    font-size: 16px;
+    line-height: 24px;
+    font-type: monospace;
+}
+
+.nav1 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    color: rgb(26,26,166);
+    text-align: right;
+    
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+    padding-right: 10px;
+    border-right: 1px solid #bbb;
+}
+
+
+h1 {
+    text-align: center;
+    font-type: monospace bold;
+    color: #676767;
+    background-color: #73c2fb;
+    width: 90%;
+    height: 30%;
+}
+
+#description {
+    font-size: 14px;
+    text-align: center;
+    color: orangered;
+    margin-top: 20px;
+}
+
+#survey-form {
+    margin-left: 140px;
+    margin-right: 80px;
+    
+}
+
+#legend1 {
+    text-align: left;
+    color: dodgerblue;
+}
+
+.biodata {
+    width: 85%;
+    height: 20%;
+    margin-top: 10px; 
+    text-align: center;
+}
+
+.hhcapacity {
+    width: 35%;
+    background-color: #73c2fb;
+    margin-top: 10px; 
+    margin-left: 30%;
+}
+
+.geodata {
+    width: 70%;
+    margin-top: 10px; 
+    margin-left: 80px;
+}
+
+#legend3 {
+    color: dodgerblue;
+}
+
+
+.addinfor {
+    width: 65%;
+    margin-top: 10px; 
+    margin-left: 10%;
+}
+
+#legend4 {
+    color: dodgerblue;
+}
+
+textarea {
+    text-align: center;
+ margin-left: 30%
+     
+}
+
+
+#submit {
+    margin-left: 40%;
+    background-color: #73c2fb;
+    font-style: oblique;
+    border-radius: 2%;
+    height: 25px;
+    width: 70px;
+}
+
+.confidentiality {
+    width: 80vw;
+    height: 15vh;
+    z-index: 7;
+    margin-left: 40px;
+    margin-top: 10px;
+    text-align: center;
+    color: orangered;
+}
+
+#footer {
+    background-color: #73c2fb;
+    width: 90%;
+    text-align: center;
+    height: 10%;
+    z-index: 9;
+    margin-top: 30px;
+}
+
+
+
+input[type=text],
+input[type=email],
+input[type=number],
+textarea,
+fieldset {
+/* required to properly style form 
+   elements on WebKit based browsers */
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
