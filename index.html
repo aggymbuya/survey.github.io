@@ -28,8 +28,8 @@
 <form id="survey-form">
 <fieldset id="biodata" class="biodata">
     <legend id="legend1"> Key in Your Bio Data</legend>
-<label for="Name" id="name-label">Full Name:*</label>
-<input type="text" id="name" name="name-label" placeholder="Enter your Full Name" required> 
+<label for="name" id="fullName">Full Name:*</label>
+<input type="text" id="fullName" name="fullName" placeholder="Enter your Full Name" required> 
 <label for="email" id="email-label">Email:</label>
 <input id="email" type="email" placeholder="Enter your Email Address" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  size="30" required> 
 
@@ -53,18 +53,18 @@
 <legend>Enter your HouseHold Details</legend>              
 <label for="hh">Are you the Head of your household?</label> 
     <label id="hhyes">Yes</label>
-    <input id="hhyes" type="radio" name="hh" value="hhyes" placeholder="select agree if in consent">
+    <input id="hhyes" type="radio" name="hhHold" value="hhyes" placeholder="select agree if in consent">
     <label id="hhno">No</label>
-    <input id="hhno" type="radio" name="hh" value="hhno" placeholder="select this option if you do not agree to the terms and conditions"> 
+    <input id="hhno" type="radio" name="hhHold" value="hhno" placeholder="select this option if you do not agree to the terms and conditions"> 
     <br>
     
     
 <label for="nchildren">How many children under 5?</label> <br>
           <label id="umale">Male</label>
-          <input id="umale" type="number" name="umale" value="1" min="1" max="5" size="5" placeholder="under age male children" onkeyup="imposeminmax(this)">
+          <input id="umale" type="number" name="u5male" value="1" min="1" max="5" size="5" placeholder="under age male children" onkeyup="imposeminmax(this)">
     
           <label id="ufemale">Female</label>
-          <input id="ufemale" type="number" name="ufemale" value="1" min="1" max="5" size="5" placeholder="under age female children" onkeyup="imposeminmax(this)"> 
+          <input id="ufemale" type="number" name="u5female" value="1" min="1" max="5" size="5" placeholder="under age female children" onkeyup="imposeminmax(this)"> 
   <br> <br>
 <label for="teens">How many children are Over 5years?</label> <br>
     <label id="tmale">Male</label>
@@ -107,9 +107,9 @@
             
 <p class="confidentiality">I hereby confirm that the information provided in this survey is true and complete and shall be helpful in the shortlisting of beneficiaries of the program. I am aware that any false information or fraudulent information shall automatically lead to my disqualification. <br>
     <label id="agree">Agree</label>
-    <input id="accept" type="radio" name="agree" value="1" required>
+    <input id="accept" type="radio" name="disclaimer" value="1" required>
      <label id="disagree">Disagree</label>
-    <input id="disagree" type="radio" name="agree" value="2" required>
+    <input id="disagree" type="radio" name="disclaimer" value="2" required>
     </p> 
     
 <input id="submit" class="submit" type="submit" value="Submit"> 
